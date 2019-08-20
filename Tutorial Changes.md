@@ -24,7 +24,6 @@ Gripql is a python library for GRIP. Go ahead and install it using this [link](h
  pip install gripql
  ```
  
- 
 ### 1.2 Authentication
     
 
@@ -32,7 +31,7 @@ Your next step is connecting your Google account to our website. We use this ste
 
   
 
-Or if you would rather do the set up and authentication from your  terminal, you can use the bash code down below. This code achieves two main goals. The ``pip install gripql`` part installs the gripql library for python and the other two lines of code below it are made to help you authenticate using your email. Run the following in terminal as per the above authentication page.
+Or if you would rather do the set up and authentication from your  terminal, you can use the bash code down below. This code achieves two main goals. The ``pip install gripql`` part installs the gripql library for python and the other two lines of code below it are made to help you authenticate using your Google credentials. Run the following in terminal as per the above authentication page.
 
   
 ``` bash
@@ -80,6 +79,8 @@ O = conn.graph("bmeg_rc2")
 # 3. Query data from a particular data source
 
 Traverse graph to grab all data from one data source (e.g. CCLE). See how the graph is set up by viewing the current [schema](https://bmeg.io/explore/schema)
+
+>**NOTE:** gripql is the language we use to transverse the schema graph. [This link](https://bmeg.github.io/grip/docs/queries/operations/) contains many gripql operations that can help you. 
 
 Here, you’ll be grabbing all the data from one data source (e.g. CCLE) found within BMEG. In the first line of this code block, we are creating what is essentially an empty list and naming it ``p``. Then within the for loop, we are searching for a vertex with the label “project”. In our if statement, we ask if the data project identification starts with CCLE and if it does, we bring out that data source under the name ``p``.
 
