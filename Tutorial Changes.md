@@ -2,9 +2,6 @@ Now you know what BMEG is and what it does, you can start using BMEG. Follow the
 
 # How to Use BMEG
 
-  
-  
-
 This six-step tutorial is created to introduce you to BMEG. Because this tutorial is designed to get you started from the basics, **no prior knowledge is necessary**. As you go through the tutorial, **remember that obtaining data from BMEG for your specific analysis is the ultimate goal**, so everything we will do before then is to set things up for that last step. This tutorial will focus on three main areas: **1.** setting up the right tools to use BMEG, **2.** accessing BMEG, and **3.** conducting analysis.
 
 # 1. Grip Set up and Authentication
@@ -120,7 +117,7 @@ First, populate data into a dictionary.
 + ``data`` keys = desired columns and values = a nested dictionary where keys = desired rows and values = entry
 + In our example we use keys = cell lines and values = a nested dictionary where keys = drugs and values = EC50 values
 
-Now let’s format the data so that we can save it as a .tsv file. To do this we will populate the data in a dictionary then create a dataframe from that dictionary. And finally save this dataframe as a .tsv file.
+Now let’s format the data so that we can save it as a .tsv file. To do this we will populate the data in a dictionary then create a DataFrame from that dictionary. And finally save this DataFrame as a .tsv file.
 
 ``` python
 data = {}
@@ -133,7 +130,7 @@ for row in q:
         data[row[0]][row[1]] = row[2]
 ```
 
-Second, create a pandas dataframe for readability purposes.
+Second, create a pandas DataFrame for readability purposes.
 
 ``` python
 # Create pandas df
@@ -158,9 +155,6 @@ ofn_drug = "name-of-drug-tsv"
 os.chdir(output_path)
 drugDF.to_csv(ofn_drug, sep="\t")
 ```
-
-
-  
 
 # 6. Continue with downstream analysis
 
