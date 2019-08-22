@@ -71,7 +71,7 @@ This code here will connect you to the BMEG server and create a graph handle. As
 
 ``` python 
 conn = gripql.Connection("https://bmeg.io/api", credential_file = '/tmp/bmeg_credentials.json')
-O = conn.graph("bmeg_rc2") 
+G = conn.graph("bmeg_rc2") 
 ```
 # 3. Query data from a particular data source
 
@@ -84,7 +84,7 @@ Here, you’ll be grabbing all the data from one data source (e.g. CCLE) found w
 ``` python
 p = []
 # Start query at vertex and look for labels starting with Project
-for row in O.query().V().hasLabel("Project"):
+for row in G.query().V().hasLabel("Project"):
     if row.data.project_id.startswith("CCLE"):
         p.append(row.gid)
 ```
@@ -101,7 +101,7 @@ For example, in this tutorial, I am interested in looking at the drug response t
 
 ``` python
 # Traverse through schema nodes
-q = O.query().V(p).out("cases").as_("CASE").out("samples").out("aliquots").out("drug_response").as_("DRUGRESP").out("compounds").as_("COMP")
+q = G.query().V(p).out("cases").as_("CASE").out("samples").out("aliquots").out("drug_response").as_("DRUGRESP").out("compounds").as_("COMP")
 
 # Render node properties of interest (cell line, drug, EC50 value)
 q = q.render(["$CASE._data.case_id", "$COMP._gid", "$DRUGRESP._data.ec50"])
