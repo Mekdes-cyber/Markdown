@@ -4,6 +4,8 @@ Now you know what BMEG is and what it does, you can start using BMEG. Follow the
 
 This six-step tutorial is created to introduce you to BMEG. Because this tutorial is designed to get you started from the basics, **no prior knowledge is necessary**. As you go through the tutorial, **remember that obtaining data from BMEG for your specific analysis is the ultimate goal**, so everything we will do before then is to set things up for that last step. This tutorial will focus on three main areas: **1.** setting up the right tools to use BMEG, **2.** accessing BMEG, and **3.** conducting analysis.
 
+>***OPTION:*** The code used in this tutorial can be found in a user-friendly, interactive ipython scrpit in Google Colaboratory. Follow this link to open the code in a browser and follow along with the tutorial. When you click on the link, it will take you to your Google Drive. Choose the option at the top center of the page that says **"Open with Google Colaboratory"**.(If you have Jupyter Notebooks already installed, you can choose the option of downloading.) Once in Colaboratory, you can view the code. On the top left corner, hit the **"Open in Playground"** button, then hit **"Run anyway"**, and **"yes"**. Now follow along. 
+
 # 1. Grip Set up and Authentication
 
 This is a one time setup step.
