@@ -13,8 +13,7 @@ This is a one time setup step.
 ### 1.1  Getting set up with gripql
     
 
-Gripql (GRaph Integration Platform query language) is a python library for interacting with a GRIP server. Ultimately, gripql provides a graph interface on top of a variety of existing database technologies. You can find out more about GRIP right [here](https://bmeg.github.io/grip/).
-
+Gripql (GRaph Integration Platform query language) is a python library for interacting with a GRIP server. Ultimately, gripql provides a graph interface on top of a variety of existing database technologies. You can find out more about GRIP right <a href="https://bmeg.github.io/grip/" target="_blank" >here</a>.
   
 
 Gripql is a python library for GRIP. Go ahead and install it using this [link](https://pypi.org/project/gripql/) in terminal.
