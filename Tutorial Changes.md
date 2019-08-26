@@ -170,6 +170,8 @@ Let’s take a quick break and view what our data looks like:
 ``` python
 drugDF
 ```
+![](https://lh4.googleusercontent.com/vyEs5WXhZ3vCh7fIkqJWQHbm9TN_AXTCO65wPwhkCVEJwQmbuQsEO7El8xIhAz8wEMFfVjf7DQvSC3FVPErpPlv0jcRYou17ezxlZDc8HB399QZqDrBx52XeieIq9dNYSypZICFa)
+
 Now save it as a .tsv file. Replace “where-to-save” with the path where you'd like to save this file on your machine and replace "name-of-drug-tsv" with the file name you'd like.
 ``` python
 # Save
