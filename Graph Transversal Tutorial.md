@@ -1,5 +1,7 @@
-###  Schema Graph Transversal Tutorial
-Graph transversal is the movement within a graph from one node (vertex) or edge to another. When doing graph transversal, there are two important things to keep in mind: 
+###  Schema Graph Traversal Tutorial
+Compiled: August 26, 2019 using schema bmeg_rc2
+
+Graph traversal is the movement within a graph from one node (vertex) or edge to another. When doing graph traversal, there are two important things to keep in mind: 
 
 1)  The structure and composition of the graph  
 2) The commands we use to move around within it 
@@ -23,7 +25,7 @@ All the vertices have a common orientation that includes three main parts:
 
 Go  <a href="https://bmegio.ohsu.edu/explore/schema" target="_blank" >here</a> to see the current schema. When you click on a specific vertex, more information (including the three main elements of each vertex) will appear below the graph.
 
-#### Part 2: Getting introduced to  transversal operations
+#### Part 2: Getting introduced to  traversal operations
 
   
 
@@ -77,7 +79,7 @@ When we look at this code, there are two main things to consider.
 Operations:
 
   - **G.query()** - Everytime you see query, it means we are seeking data. The G that is placed before ```.query()``` is a way of establishing a connection to the BMEG server. So G.query is a way of seeking data from BMEG.
-   - **.V()** - When we use this, we are starting our query from a vertex.
+  - **.V()** - When we use this, we are starting our query from a vertex.
     
 - **.E()** Here we are starting our query from an edge.
  - **.hasLabel()** This command is used as a filtering mechanism. For example, in the case of how it was used in the code above, we used it to only filter out data that has the label “Project”.
@@ -86,7 +88,7 @@ Operations:
     
 - **.render(list-of-data-you-want)** - This command is used to release the data we have carried over to this point.
     
-- **.as()**- is a mechanism to name a dataset with a name we want to give it. Also, it means store current row for future reference
+- **.as_()**- is a mechanism to name a dataset with a name we want to give it. Also, it means store current row for future reference
 - **.append** - brings out the data that has been queried  
   
  ##### Part 2.2: Understanding Transversal Commands
