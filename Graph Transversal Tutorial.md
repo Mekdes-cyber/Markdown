@@ -96,20 +96,26 @@ If you understand how the code above is able to query for and filter data, you c
 >Here, I have grouped some of the commands in categories based on what they do, to make it easier to understand.
 >
 >***A. Commands we use to start a transversal:***
+>``.V([ids])`` ``.E([ids])`` 
 >
 >***B. Commands we use to continue transversal through the graph; going in and out of nodes and edges:***
 >
->***C. commands that filter data:*** 
+>`` .in_(), inV()`` ``.out(), .outV()``     ``.both(), .bothV()``  ``.inE()``   `` .outE()``    ``.bothE()``
+>
+>***C. Commands that filter data:***
+> 
+>``.has()``   ``gripql.eq(variable, value)``    ``gripql.gt(variable, value)``    ``gripql.lt(variable, value)``    ``gripql.gte(variable, value)``    ``gripql.lte(variable, value)``  ``gripql.within(variable, value)``   ``gripql.contains(variable, value)`` ``gripql.and_([conditions])``  ``gripql.or_([conditions])`` ``gripql.not_(condition)``
 >
 >***D. Commands that help us save, limit, render, put a range on, include and exclude information of outputs:***
 >
+>``.as_(name)``  ``.select([names])`` ``.limit(count)`` ``.skip(count)`` ``.range(start, stop)`` ``.fields([fields])`` ``.render(template)`` ``.aggregate([aggregations])``
+>
 >***E. Commands that help us aggregate data sets:***
+>
+>``.gripql.term(name, field, size)`` `` .gripql.histogram(name, field, interval)``  ``.gripql.percentile(name, field, percents=[])``  ``.count()``  ``.distinct([fields])``
 
-To learn in depth what the commands do, please go to the gripql operations page right <a href="https://bmeg.github.io/grip/docs/queries/operations/" target="_blank" >here</a>.
+To learn in depth the definitions of the commands and what they do, please go to the gripql operations page right <a href="https://bmeg.github.io/grip/docs/queries/operations/" target="_blank" >here</a>.
 
 To go back to the main tutorial, click this link.
 
 If you have any questions, comments, or concerns, contact us through <a href="https://gitter.im/bmeg/" target="_blank" >Gitter</a>  and/or <a href="https://github.com/bmeg/" target="_blank" >GitHub</a>. 
-
-  
-
