@@ -1,32 +1,32 @@
-# [**BMEG**](https://bmeg.io/) Beginner Tutorial 
+## [**BMEG**](https://bmeg.io/) Beginner Tutorial 
 Genomic data, meaning data relating to DNA, is used for
-* detecting,
-* diagnosing, and
-* treating diseases.
+- detecting,
+- diagnosing, and
+- treating diseases.
 
 In the field of cancer research, there are various projects (thousands of them) out there that have individually tested drug responses and recorded their data.
 	
 To perform thorough analyses of various drugs, compiling data from different sources is crucial. This can be useful in doing downstream analysis. However, different data sources are scattered. That's where BMEG comes in. 
 
-##  BMEG: The Big Solution
-###  Bio Medical Evidence Graph
+###  BMEG: The Big Solution
+#####  Bio Medical Evidence Graph
 Simply put, BMEG is a set up to run analyses of data that are compiled from various sources into one server. It is a tool that helps us get a comprehensive version of recorded data. Its main purpose is to create one "space" where many sources of data exist so the user can compile multiple sources (eg. into a single spreadsheet). Data sources may have overlaps, which can reinforce existing knowledge. And in cases where there are no overlaps, different data sources can complement each other. 
 
 A growing number of data sources have been loaded onto BMEG. And BMEG will continue to expand its database by incorporating additional data from new sources.
 
 Now you know what BMEG is and what it does, you can start using BMEG. Follow the step-by-step tutorial below.
 
-# How to Use BMEG
+### How to Use BMEG
 
 This six-step tutorial is created to introduce you to BMEG. Because this tutorial is designed to get you started from the basics, **no prior knowledge is necessary**. As you go through the tutorial, **remember that obtaining data from BMEG for your specific analysis is the ultimate goal**, so everything we will do before then is to set things up for that last step. This tutorial will focus on three main areas: **1.** setting up the right tools to use BMEG, **2.** accessing BMEG, and **3.** conducting analysis.
 
 >***OPTION:*** The code used in this tutorial can be found in a user-friendly, interactive ipython scrpit in Google Colaboratory. Follow this link to open the code in a browser and follow along with the tutorial. When you click on the link, it will take you to your Google Drive. Choose the option at the top center of the page that says **"Open with Google Colaboratory"**.(If you have Jupyter Notebooks already installed, you can choose the option of downloading.) Once in Colaboratory, you can view the code. On the top left corner, hit the **"Open in Playground"** button, then hit **"Run anyway"**, and **"yes"**. Now follow along. 
 
-# 1. Grip Set up and Authentication
+#### 1. Grip Set up and Authentication
 
 This is a one time setup step.
 
-### 1.1  Getting set up with gripql
+##### 1.1  Getting set up with gripql
     
 
 Gripql (GRaph Integration Platform query language) is a python library for interacting with a GRIP server. Ultimately, gripql provides a graph interface on top of a variety of existing database technologies. You can find out more about GRIP right <a href="https://bmeg.github.io/grip/" target="_blank" >here</a>.
@@ -39,7 +39,7 @@ Gripql is a python library for GRIP. Go ahead and install it using this <a href=
  pip install gripql
  ```
  
-### 1.2 Authentication
+##### 1.2 Authentication
     
 
 Your next step is connecting your Google account to our website. We use this step to be able to authenticate that you are a BMEG user. Press the link to go to our <a href="https://bmeg.io/analyze/getting_started/" target="_blank" >authentication page</a>
@@ -63,7 +63,7 @@ echo '{"OauthEmail":"<email>","OauthAccessToken":"<token>=","OauthExpires":<leng
 >
 >To install the libraries used in this tutorial, you will most likely use ``pip`` so it would be useful to install ``pip`` as well. Instructions on installing ``pip`` are <a href="https://pypi.org/project/pip/" target="_blank" >here</a>. If you have a python version 2.7.9 or newer, ``pip`` comes included.
 
-# 2. Situate Libraries and Connect to server
+#### 2. Situate Libraries and Connect to server
 
 Each of the libraries listed below have different functionalities that ultimately help us in our analysis. To be able to import the libraries in our code, we first need to install them (if we don’t already have them). Follow the links below to install the libraries on your computer. The links will take you to a page with instructions on how to install each library for different systems.
     
@@ -96,7 +96,7 @@ This code here will connect you to the BMEG server and create a graph handle. As
 conn = gripql.Connection("https://bmeg.io/api", credential_file = '/tmp/bmeg_credentials.json')
 G = conn.graph("bmeg_rc2") 
 ```
-# 3. Query data from a particular data source
+#### 3. Query data from a particular data source
 
 Traverse graph to grab all data from one data source (e.g. CCLE). See how the graph is set up by viewing the current <a href="https://bmeg.io/explore/schema" target="_blank" >schema</a>
 
@@ -113,7 +113,7 @@ for row in G.query().V().hasLabel("Project"):
         p.append(row.gid)
 ```
 
-# 4. Pull out data of interest from node properties
+#### 4. Pull out data of interest from node properties
 
 Accessing a whole data source will likely mean that you will have a lot of information you don’t need. For this reason, we need to filter our data to only get precise information on the things we want to know about. This code is made to filter data by only keeping data points of interest.
 
@@ -132,7 +132,7 @@ q = q.render(["$CASE._data.case_id", "$COMP._gid", "$DRUGRESP._data.ec50"])
 ```
 
 
-# 5. Save data locally
+#### 5. Save data locally
 
 We need to save our data file so we can access it whenever we want. But before that, we need to re-format our data so that it can be saved easily. 
 
@@ -180,7 +180,7 @@ os.chdir(output_path)
 drugDF.to_csv(ofn_drug, sep="\t")
 ```
 
-# 6. Continue with downstream analysis
+#### 6. Continue with downstream analysis
 
 Congratulations on making it to the last step of this tutorial! You now have produced a data file from BMEG and can continue with your analysis.
 
