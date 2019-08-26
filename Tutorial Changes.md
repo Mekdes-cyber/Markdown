@@ -1,4 +1,8 @@
 ## [**BMEG**](https://bmeg.io/) Beginner Tutorial 
+Compiled: August 26, 2019 using schema bmeg_rc2
+
+Mekdes Hilete
+
 Genomic data, meaning data relating to DNA, is used for
 - detecting,
 - diagnosing, and
@@ -6,11 +10,11 @@ Genomic data, meaning data relating to DNA, is used for
 
 In the field of cancer research, there are various projects (thousands of them) out there that have individually tested drug responses and recorded their data.
 	
-To perform thorough analyses of various drugs, compiling data from different sources is crucial. This can be useful in doing downstream analysis. However, different data sources are scattered. That's where BMEG comes in. 
+To perform thorough analyses of various drugs, compiling data from different sources is crucial. This can be useful in conducting downstream analysis. However, different data sources are scattered. That's where BMEG comes in. 
 
 ###  BMEG: The Big Solution
 #####  Bio Medical Evidence Graph
-Simply put, BMEG is a set up to run analyses of data that are compiled from various sources into one server. It is a tool that helps us get a comprehensive version of recorded data. Its main purpose is to create one "space" where many sources of data exist so the user can compile multiple sources (eg. into a single spreadsheet). Data sources may have overlaps, which can reinforce existing knowledge. And in cases where there are no overlaps, different data sources can complement each other. 
+Simply put, BMEG is a set up to run analyses of data that are compiled from various sources into one server. It is a tool that helps us get a comprehensive version of recorded data. BMEG allows for the user to easily access raw data from multiple sources all in one convenient spot. Ultimately, the user can compile data from multiple sources into a single spreadsheet using BMEG. Furthermore, BMEG harmonizes data into one alias, rather than requireing the user to conduct this harmonization themselves. Data sources may have overlaps, which can reinforce existing knowledge. And in cases where there are no overlaps, different data sources can complement each other. 
 
 A growing number of data sources have been loaded onto BMEG. And BMEG will continue to expand its database by incorporating additional data from new sources.
 
