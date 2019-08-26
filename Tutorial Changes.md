@@ -13,11 +13,11 @@ This is a one time setup step.
 ### 1.1  Getting set up with gripql
     
 
-Gripql (GRaph Integration Platform query language) is a python library for interacting with a GRIP server. Ultimately, gripql provides a graph interface on top of a variety of existing database technologies. You can find out more about GRIP right <a href="https://bmeg.github.io/grip/ target="_blank" >here</a>.
+Gripql (GRaph Integration Platform query language) is a python library for interacting with a GRIP server. Ultimately, gripql provides a graph interface on top of a variety of existing database technologies. You can find out more about GRIP right <a href="https://bmeg.github.io/grip/" target="_blank" >here</a>.
 
   
 
-Gripql is a python library for GRIP. Go ahead and install it using this [link](https://pypi.org/project/gripql/) in terminal.
+Gripql is a python library for GRIP. Go ahead and install it using this <a href="https://pypi.org/project/gripql/" target="_blank" >link</a> in terminal.
 
  ``` bash
  pip install gripql
@@ -26,7 +26,8 @@ Gripql is a python library for GRIP. Go ahead and install it using this [link](h
 ### 1.2 Authentication
     
 
-Your next step is connecting your Google account to our website. We use this step to be able to authenticate that you are a BMEG user. Press the link to go to our [authentication page](https://bmeg.io/analyze/getting_started/) and click on “Authenticate with Google” which will redirect you to Google to verify identity. Then you will be granted interactive and API access.
+Your next step is connecting your Google account to our website. We use this step to be able to authenticate that you are a BMEG user. Press the link to go to our <a href="https://bmeg.io/analyze/getting_started/" target="_blank" >authentication page</a>
+  and click on “Authenticate with Google” which will redirect you to Google to verify identity. Then you will be granted interactive and API access.
 
   
 
@@ -41,17 +42,20 @@ curl -H "OauthEmail: <email>" -H "OauthAccessToken: <token>=" -H "OauthExpires: 
 echo '{"OauthEmail":"<email>","OauthAccessToken":"<token>=","OauthExpires":<length>} ' > /tmp/bmeg_credentials.json
 ```
 
-> The following blocks of code are written in python. Therefore, it would be beneficial to have python installed on your device. Instructions on installing python can be found [here](https://www.python.org/downloads/).
+> The following blocks of code are written in python. Therefore, it would be beneficial to have python installed on your device. Instructions on installing python can be found <a href="https://www.python.org/downloads/" target="_blank" >here</a>.
+.
 >
->To install the libraries used in this tutorial, you will most likely use ``pip`` so it would be useful to install ``pip`` as well. Instructions on installing ``pip`` are [here](https://pypi.org/project/pip/). If you have a python version 2.7.9 or newer, ``pip`` comes included.
+>To install the libraries used in this tutorial, you will most likely use ``pip`` so it would be useful to install ``pip`` as well. Instructions on installing ``pip`` are <a href="https://pypi.org/project/pip/" target="_blank" >here</a>. If you have a python version 2.7.9 or newer, ``pip`` comes included.
 
 # 2. Situate Libraries and Connect to server
 
 Each of the libraries listed below have different functionalities that ultimately help us in our analysis. To be able to import the libraries in our code, we first need to install them (if we don’t already have them). Follow the links below to install the libraries on your computer. The links will take you to a page with instructions on how to install each library for different systems.
     
-- [Instructions](https://pypi.org/project/pandas/) on installing pandas - Open source python library that helps us perform fast data cleaning, preparation, and analysis
+- <a href="https://pypi.org/project/pandas/" target="_blank" >Instructions</a>
+ on installing pandas - Open source python library that helps us perform fast data cleaning, preparation, and analysis
     
--  [Instructions](https://www.scipy.org/install.html) on installing numpy - a multidimensional container for scientific computing that allows us to do calculations on different collections of values.
+- <a href="https://www.scipy.org/install.html" target="_blank" >Instructions</a>
+ on installing numpy - a multidimensional container for scientific computing that allows us to do calculations on different collections of values.
     
 - json - (JavaScript Object Notation) is a data interchange language. This package usually comes with python. Check if you already have it installed
 
@@ -68,7 +72,8 @@ import os
 ```
   
 
-This code here will connect you to the BMEG server and create a graph handle. As you might have already known, **the BMEG server is where all the data lives.** To grab any type of data, we must establish a connection with the server. The first line in this code block sets up a connection with the BMEG server using grip and the second line creates a graph handle based on a specific graph schema. **In other words, while the first line sets up a connection with bmeg, the second line chooses a specific schema type. It is recommeneded to use the most recent schema which is found** [**here**](https://bmeg.io/explore/schema)
+This code here will connect you to the BMEG server and create a graph handle. As you might have already known, **the BMEG server is where all the data lives.** To grab any type of data, we must establish a connection with the server. The first line in this code block sets up a connection with the BMEG server using grip and the second line creates a graph handle based on a specific graph schema. **In other words, while the first line sets up a connection with bmeg, the second line chooses a specific schema type. It is recommeneded to use the most recent schema which is found** <a href="https://bmeg.io/explore/schema" target="_blank" >**here**</a>
+
 
 
 ``` python 
@@ -77,9 +82,10 @@ G = conn.graph("bmeg_rc2")
 ```
 # 3. Query data from a particular data source
 
-Traverse graph to grab all data from one data source (e.g. CCLE). See how the graph is set up by viewing the current [schema](https://bmeg.io/explore/schema)
+Traverse graph to grab all data from one data source (e.g. CCLE). See how the graph is set up by viewing the current <a href="https://bmeg.io/explore/schema" target="_blank" >schema</a>
 
->**NOTE:** gripql is the language we use to transverse the schema graph. [This link](https://bmeg.github.io/grip/docs/queries/operations/) contains many gripql operations that can help you. 
+
+>**NOTE:** gripql is the language we use to transverse the schema graph. <a href="https://bmeg.github.io/grip/docs/queries/operations/" target="_blank" >This link</a> contains many gripql operations that can help you. 
 
 Here, you’ll be grabbing all the data from one data source (e.g. CCLE) found within BMEG. In the first line of this code block, we are creating what is essentially an empty list and naming it ``p``. Then within the for loop, we are searching for a vertex with the label “project”. In our if statement, we ask if the data project identification starts with CCLE and if it does, we bring out that data source under the name ``p``.
 
@@ -162,6 +168,6 @@ drugDF.to_csv(ofn_drug, sep="\t")
 
 Congratulations on making it to the last step of this tutorial! You now have produced a data file from BMEG and can continue with your analysis.
 
-You can check out some downstream analysis examples [here](https://bmeg.io/analyze/examples/).
+You can check out some downstream analysis examples <a href="https://bmeg.io/analyze/examples/" target="_blank" >here</a>.
 
-If you have any questions or need more support, contact us using [Gitter](https://gitter.im/bmeg/). We will get back to you as soon as possible.
+If you have any questions or need more support, contact us using <a href="https://gitter.im/bmeg/" target="_blank" >Gitter</a>. We will get back to you as soon as possible.
