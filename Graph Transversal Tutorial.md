@@ -6,7 +6,7 @@ Graph traversal is the movement within a graph from one node (vertex) or edge to
 1)  The structure and composition of the graph  
 2) The commands we use to move around within it 
 
-In order to use BMEG, doing graph transversal is an important step— ***without it you can not access the data you want***. In this tutorial, we will look at an example BMEG schema graph and some of its vertices and edges, and we will define some of the key operations we need to use when we move within the schema.
+In order to use BMEG, doing graph traversal is an important step— ***without it you can not access the data you want***. In this tutorial, we will look at an example BMEG schema graph and some of its vertices and edges, and we will define some of the key operations we need to use when we move within the schema.
 
   
 
@@ -29,7 +29,7 @@ Go  <a href="https://bmegio.ohsu.edu/explore/schema" target="_blank" >here</a> t
 
   
 
-Before I give you a list of gripql operations, I think it would be beneficial to look at an example code that is written to perform transversal of a BMEG schema graph. We will analyze the role of each operation. If you are familiar with the code and what it does, you can skip this part and move onto the next section.
+Before I give you a list of gripql operations, I think it would be beneficial to look at an example code that is written to perform traversal of a BMEG schema graph. We will analyze the role of each operation. If you are familiar with the code and what it does, you can skip this part and move onto the next section.
 
   
   
@@ -91,16 +91,16 @@ Operations:
 - **.as_()**- is a mechanism to name a dataset with a name we want to give it. Also, it means store current row for future reference
 - **.append** - brings out the data that has been queried  
   
- ##### Part 2.2: Understanding Transversal Commands
+ ##### Part 2.2: Understanding Traversal Commands
 
 If you understand how the code above is able to query for and filter data, you can move into creating your own code to query BMEG for your own downstream analysis. <a href="https://bmeg.github.io/grip/docs/queries/operations/" target="_blank" > This link</a> takes you to a page with a list of different gripql commands you can use. 
 
 >Here, I have grouped most of the commands in categories based on their functionality: 
 >
->***A. Commands we use to start a transversal:***
+>***A. Commands we use to start a traversal:***
 >``.V([ids])`` ``.E([ids])`` 
 >
->***B. Commands we use to continue transversal through the graph; going in and out of nodes and edges:***
+>***B. Commands we use to continue traversal through the graph; going in and out of nodes and edges:***
 >
 >`` .in_(), inV()`` ``.out(), .outV()``     ``.both(), .bothV()``  ``.inE()``   `` .outE()``    ``.bothE()``
 >
